@@ -10,12 +10,12 @@
     "downlevelIteration": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["packages/components/*"],
-      "@utils/*": ["packages/utils/*"],
-      "@hooks/*": ["packages/hooks/*"],
+      "@components/*": ["src/packages/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
     },
   },
-  "include": ["index.ts", "packages/**/*"],
+  "include": ["src/**/*"],
   "exclude": [
     "main.tsx",
     "packages/components/__example__/*",

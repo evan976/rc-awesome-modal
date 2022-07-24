@@ -10,8 +10,8 @@ import babel from '@rollup/plugin-babel'
 import dts from 'rollup-plugin-dts'
 import sass from 'sass'
 
-const entry = 'index.ts'
-const componentsDir = 'packages/components'
+const entry = 'src/index.ts'
+const componentsDir = 'src/packages'
 const componentsName = fs.readdirSync(path.resolve(componentsDir))
 const componentsEntry = componentsName.map(
   (name) => `${componentsDir}/${name}/index.ts`

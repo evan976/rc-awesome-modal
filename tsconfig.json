@@ -21,16 +21,12 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@components/*": ["packages/components/*"],
-      "@utils/*": ["packages/utils/*"],
-      "@hooks/*": ["packages/hooks/*"],
+      "@components/*": ["src/packages/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
     },
   },
-  "include": [
-    "index.ts",
-    "main.tsx",
-    "packages/**/*",
-  ],
+  "include": ["src/**/*"],
   "exclude": [
     "packages/components/__example__/*",
     "node_modules/*"

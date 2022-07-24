@@ -15,14 +15,17 @@
   "type": "module",
   "module": "dist/index.js",
   "typings": "dist/type/src/index.d.ts",
-  "files": [
-    "dist/"
-  ],
+  "files": ["dist/"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wujihua118/rc-awesome-modal.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "modal",
+    "dialog",
+    "popup"
+  ],
   "author": {
     "name": "Evan",
     "email": "wjh50940@163.com"

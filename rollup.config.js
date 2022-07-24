@@ -21,9 +21,9 @@ const isProd = process.env.NODE_ENV === 'production'
 const BABEL_ENV = process.env.BABEL_ENV
 
 const babelOptions = {
-  presets: ["@babel/preset-env"],
+  presets: ['@babel/preset-env'],
   extensions: ['.js', '.jsx', '.ts', '.tsx', '.scss'],
-  exclude: 'node_modules',
+  exclude: 'node_modules/**'
 }
 
 const commonPlugins = [
@@ -31,8 +31,11 @@ const commonPlugins = [
   resolve(),
   commonjs({ sourceMap: !isProd }),
   typescript(),
-  babel(babelOptions),
-  json()
+  babel({
+    ...babelOptions,
+    exclude: 'node_modules/**',
+  }),
+  json(),
 ]
 
 const externalConfig = [
@@ -40,9 +43,10 @@ const externalConfig = [
   'react',
   'react-dom',
   'classname',
-  '**/node_modules/**',
+  'node_modules/**'
 ]
 
+// sass打包
 const processScss = function (context) {
   return new Promise((resolve, reject) => {
     sass.compile(
@@ -74,6 +78,8 @@ const processScss = function (context) {
 
 const esmOutput = {
   preserveModules: true,
+  preserveModulesRoot: 'src',
+  exports: 'named',
   assetFileNames: ({ name }) => {
     const { ext, dir, base } = path.parse(name);
     if (ext !== '.css') return '[name].[ext]';
@@ -87,12 +93,11 @@ export default () => {
       return [
         {
           input: [entry, ...componentsEntry],
-          output: { ...esmOutput, dir: 'dist/', format: 'es' },
+          output: { ...esmOutput, dir: 'dist', format: 'es' },
           external: externalConfig,
           plugins: [postcss({
             extract: true,
-            process: processScss,
-
+            process: processScss
           }), ...commonPlugins]
         },
         {
@@ -101,8 +106,7 @@ export default () => {
           external: externalConfig,
           plugins: [postcss({
             extract: true,
-            process: processScss,
-
+            process: processScss
           }), ...commonPlugins, dts()]
         }
       ]

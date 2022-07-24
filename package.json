@@ -1,8 +1,7 @@
 {
   "name": "rc-awesome-modal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A modal dialog component for React",
-  "main": "dist/index.js",
   "scripts": {
     "dev": "vite",
     "build": "yarn clean && rollup -c",
@@ -14,8 +13,11 @@
   },
   "type": "module",
   "module": "dist/index.js",
+  "main": "dist/index.js",
   "typings": "dist/type/src/index.d.ts",
-  "files": ["dist/"],
+  "files": [
+    "dist/"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/wujihua118/rc-awesome-modal.git"
@@ -35,6 +37,11 @@
     "url": "https://github.com/wujihua118/rc-awesome-modal/issues"
   },
   "homepage": "https://github.com/wujihua118/rc-awesome-modal#readme",
+  "peerDependencies": {
+    "classnames": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "dependencies": {
     "classnames": "^2.3.1",
     "react": "^18.2.0",

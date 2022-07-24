@@ -1,6 +1,6 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
-import './styles/index.scss'
+import './style/index.scss'
 
 // import { OverlayDemo } from 'packages/components/overlay/__example__'
 import { ModalDemo } from '@components/modal/__example__'

@@ -1,4 +1,4 @@
-import './styles/index.scss'
+import './style/index.scss'
 
 export { default as Overlay } from '@components/overlay'
 export type { OverlayProps } from '@components/overlay'

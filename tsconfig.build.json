@@ -15,10 +15,12 @@
       "@hooks/*": ["src/hooks/*"],
     },
   },
-  "include": ["src/**/*"],
+  "include": [
+    "src"
+  ],
   "exclude": [
-    "main.tsx",
-    "packages/components/__example__/*",
-    "node_modules/*"
+    "src/main.tsx",
+    "src/types.ts",
+    "src/packages/*/__example__/*"
   ]
 }

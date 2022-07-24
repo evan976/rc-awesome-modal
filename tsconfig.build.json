@@ -8,13 +8,14 @@
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["packages/components/*"],
+      "@utils/*": ["packages/utils/*"],
+      "@hooks/*": ["packages/hooks/*"],
+    },
   },
-  "include": [
-    "index.ts",
-    "packages/*/*.tsx",
-    "packages/*/*.ts"
-  ],
+  "include": ["index.ts", "packages/**/*"],
   "exclude": [
     "main.tsx",
     "packages/components/__example__/*",

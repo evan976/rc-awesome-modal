@@ -5,9 +5,11 @@ import { resolve } from 'path'
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: [
-      { find: 'packages', replacement: resolve(__dirname, 'packages') },
-      { find: 'core', replacement: resolve(__dirname, 'core') },
-    ]
+    alias: {
+      'packages': resolve(__dirname, 'packages'),
+      '@components': resolve(__dirname, 'packages/components'),
+      '@utils': resolve(__dirname, 'packages/utils'),
+      '@hooks': resolve(__dirname, 'packages/hooks'),
+    }
   }
 })

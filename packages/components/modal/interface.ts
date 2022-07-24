@@ -16,9 +16,19 @@ export interface ModalProps {
    */
   closable?: boolean
   /**
+   * 自定义 Modal 宽度
+   * @default 520
+   */
+  width?: number | string
+  /**
    * 自定义关闭图标
    */
   closeIcon?: ReactNode
+  /**
+   * 动画时长
+   * @default 300
+   */
+   duration?: number
   /**
    * 是否显示遮罩层
    * @default true
@@ -72,10 +82,32 @@ export interface ModalProps {
    * @default false
    */
   closeOnPopstate?: boolean
+  /**
+   * 取消按钮文案
+   * @default '取消'
+   */
+  cancelText?: string
+  /**
+   * 确认按钮文案
+   * @default '确定'
+   */
+  okText?: string
+  /**
+   * 自定义页脚内容，传 null 则不显示
+   */
+  footer?: ReactNode | null
   className?: string
   children?: ReactNode
   style?: CSSProperties
   stopPropagation?: string[]
+  /**
+   * 点击确定按钮的回调
+   */
+  onOk?: (e: MouseEvent<HTMLButtonElement>) => void
+  /**
+   * 点击取消按钮的回调
+   */
+  onCancel?: (e: MouseEvent<HTMLButtonElement>) => void
   /**
    * Modal 打开时的回调
    */

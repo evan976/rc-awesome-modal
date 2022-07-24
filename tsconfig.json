@@ -19,13 +19,17 @@
     "esModuleInterop": true,
     "removeComments": true,
     "strict": true,
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["packages/components/*"],
+      "@utils/*": ["packages/utils/*"],
+      "@hooks/*": ["packages/hooks/*"],
+    },
   },
   "include": [
     "index.ts",
     "main.tsx",
-    "packages/*/*.tsx",
-    "packages/*/*.ts"
+    "packages/**/*",
   ],
   "exclude": [
     "packages/components/__example__/*",

@@ -102,6 +102,6 @@ export interface ModalProps {
   onClickOverlay?: (event: MouseEvent) => void
 }
 
-export type ModalInstanceType = {
+export type ModalRef = {
   modalRef: RefObject<HTMLDivElement>
 }

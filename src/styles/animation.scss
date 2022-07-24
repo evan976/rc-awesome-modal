@@ -1,0 +1,63 @@
+@keyframes rc-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes rc-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes rc-zoom-in {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes rc-zoom-out {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.rc-fade {
+  &-enter-active {
+    animation: rc-fade-in 300ms both ease-out;
+  }
+  &-exit-active {
+    animation: rc-fade-out 300ms both ease-in;
+  }
+}
+
+.rc-zoom {
+  &-enter-active {
+    animation: rc-zoom-in 300ms both ease-out;
+  }
+  &-exit-active {
+    animation: rc-zoom-out 300ms both ease-in;
+  }
+}

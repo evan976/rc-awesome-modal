@@ -1,9 +1,9 @@
 import React, { CSSProperties, useRef } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import classNames from 'classnames'
-import { preventDefault, withStopPropagation } from '@/utils/event'
-import useEventListener from '@/hooks/useEventListener'
-import { isDef } from '@/utils/is'
+import { preventDefault, withStopPropagation } from 'packages/utils/event'
+import useEventListener from 'packages/hooks/useEventListener'
+import { isDef } from 'packages/utils/is'
 import type { OverlayProps } from './interface'
 
 const Overlay: React.FC<OverlayProps> = (props) => {

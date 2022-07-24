@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Overlay } from '@/index'
+import Overlay from '../Overlay'
 
 export const OverlayDemo: React.FC = () => {
 

@@ -1,0 +1,64 @@
+{
+  "name": "rc-awesome-modal",
+  "version": "1.0.0",
+  "description": "A modal dialog component for React",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "yarn clean && rollup -c",
+    "clean": "rimraf ./dist",
+    "update": "yarn build:esm && npm publish",
+    "build:esm": "yarn clean && cross-env BABEL_ENV=esm rollup -c",
+    "build:typed": "tsc --declaration --emitDeclarationOnly --noEmit false --outDir dist/types",
+    "build-css": "sass ./src/style/index.scss ./dist/index.css"
+  },
+  "type": "module",
+  "module": "dist/index.js",
+  "typings": "dist/type/src/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wujihua118/rc-awesome-modal.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Evan",
+    "email": "wjh50940@163.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wujihua118/rc-awesome-modal/issues"
+  },
+  "homepage": "https://github.com/wujihua118/rc-awesome-modal#readme",
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.9",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-commonjs": "^22.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@types/classnames": "^2.3.1",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.0",
+    "cross-env": "^7.0.3",
+    "fs": "^0.0.1-security",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.77.0",
+    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.32.1",
+    "sass": "^1.54.0",
+    "vite": "^3.0.2"
+  }
+}

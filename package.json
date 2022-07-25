@@ -1,6 +1,6 @@
 {
   "name": "rc-awesome-modal",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "A modal dialog component for React",
   "scripts": {
     "dev": "vite",

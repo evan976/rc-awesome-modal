@@ -27,15 +27,12 @@ function App () {
       <button onClick={() => setVisible(true)}></button>
       <Modal
         visible={visible}
-        title='标题'
-        onOk={() => {
-          console.log('ok')
-          setVisible(false)
-        }}
-        onCancel={() => {
-          console.log('cancel')
-          setVisible(false)
-        }}
+        title='title'
+        okText='confirm'
+        cancelText='cancel'
+        onClose={() => setVisible(false)}
+        onOk={() => console.log('ok')}
+        onCancel={() => console.log('cancel')}
       >
         <p>hello world...</p>
         <p>hello world...</p>
